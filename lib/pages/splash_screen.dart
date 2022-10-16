@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mini_project_moviebooking/pages/login_screen.dart';
 import 'package:mini_project_moviebooking/utils/mytheme.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -29,6 +32,13 @@ void initState(){
   _animation = 
   CurvedAnimation(parent: _animationController,curve:Curves.bounceOut,reverseCurve:Curves.bounceInOut );
   _animationController.forward(); 
+
+
+//use to link Login_screen with splash screen
+Timer(const Duration(milliseconds: 2500), () => Navigator.pushReplacement(context, MaterialPageRoute(builder:(_) =>LoginScreen())));
+
+
+
   super.initState();
 
 
@@ -41,7 +51,7 @@ void dispose(){
 }
 }
 
-
+ 
   @override
   Widget build(BuildContext context) {
     // this one to remove Dark reD color band from top
