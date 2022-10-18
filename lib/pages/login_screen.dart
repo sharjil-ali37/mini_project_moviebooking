@@ -27,8 +27,24 @@ class _LoginScreenState extends State<LoginScreen> {
        
             
             height: 80,width: 70,),
-            Text("Welcome Movie Lovers,"),
-             Text("Login to book your seat,Yes its your seat"),
+           const Padding(
+             padding: EdgeInsets.only(top: 30),
+             child: Text("Welcome Movie Lovers,",style: TextStyle(fontSize: 22,color:Colors.white ),),
+           ),
+
+
+            Padding(
+              padding: const EdgeInsets.only(top: 5),
+              child: Text("Login to book your seat,Yes its your seat",
+           style: TextStyle(fontSize: 15,color: Colors.white.withOpacity(0.7)),),),
+
+
+              const SizedBox(height: 20,),
+
+           Container(
+            margin: const EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.all(19),
+           )
 
 
           ],
